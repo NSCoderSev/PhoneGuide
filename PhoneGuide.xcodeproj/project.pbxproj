@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC00CAFC1353687F003772D8 /* EditPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC00CAFA1353687F003772D8 /* EditPersonViewController.m */; };
+		AC00CAFD1353687F003772D8 /* EditPersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC00CAFB1353687F003772D8 /* EditPersonViewController.xib */; };
 		ACEF8C7A135228D40062BBF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEF8C79135228D40062BBF6 /* UIKit.framework */; };
 		ACEF8C7C135228D40062BBF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEF8C7B135228D40062BBF6 /* Foundation.framework */; };
 		ACEF8C7E135228D40062BBF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEF8C7D135228D40062BBF6 /* CoreGraphics.framework */; };
@@ -22,6 +24,9 @@
 		ACEF8CA4135228D40062BBF6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACEF8CA2135228D40062BBF6 /* InfoPlist.strings */; };
 		ACEF8CA7135228D40062BBF6 /* PhoneGuideTests.h in Resources */ = {isa = PBXBuildFile; fileRef = ACEF8CA6135228D40062BBF6 /* PhoneGuideTests.h */; };
 		ACEF8CA9135228D40062BBF6 /* PhoneGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF8CA8135228D40062BBF6 /* PhoneGuideTests.m */; };
+		ACEF8CB4135229E40062BBF6 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF8CB3135229E40062BBF6 /* Person.m */; };
+		ACEF8CBB1352346E0062BBF6 /* NewPersonViewCOntroller.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEF8CB91352346E0062BBF6 /* NewPersonViewCOntroller.m */; };
+		ACEF8CBC1352346E0062BBF6 /* NewPersonViewCOntroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEF8CBA1352346E0062BBF6 /* NewPersonViewCOntroller.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,26 +40,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC00CAF91353687F003772D8 /* EditPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPersonViewController.h; sourceTree = "<group>"; };
+		AC00CAFA1353687F003772D8 /* EditPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPersonViewController.m; sourceTree = "<group>"; };
+		AC00CAFB1353687F003772D8 /* EditPersonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPersonViewController.xib; sourceTree = "<group>"; };
 		ACEF8C75135228D40062BBF6 /* PhoneGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEF8C79135228D40062BBF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACEF8C7B135228D40062BBF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ACEF8C7D135228D40062BBF6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		ACEF8C81135228D40062BBF6 /* PhoneGuide-Info.plist */ = {isa = PBXFileReference; path = "PhoneGuide-Info.plist"; sourceTree = "<group>"; };
+		ACEF8C81135228D40062BBF6 /* PhoneGuide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhoneGuide-Info.plist"; sourceTree = "<group>"; };
 		ACEF8C83135228D40062BBF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ACEF8C85135228D40062BBF6 /* PhoneGuide-Prefix.pch */ = {isa = PBXFileReference; path = "PhoneGuide-Prefix.pch"; sourceTree = "<group>"; };
+		ACEF8C85135228D40062BBF6 /* PhoneGuide-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneGuide-Prefix.pch"; sourceTree = "<group>"; };
 		ACEF8C86135228D40062BBF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ACEF8C88135228D40062BBF6 /* PhoneGuideAppDelegate.h */ = {isa = PBXFileReference; path = PhoneGuideAppDelegate.h; sourceTree = "<group>"; };
+		ACEF8C88135228D40062BBF6 /* PhoneGuideAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneGuideAppDelegate.h; sourceTree = "<group>"; };
 		ACEF8C89135228D40062BBF6 /* PhoneGuideAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneGuideAppDelegate.m; sourceTree = "<group>"; };
 		ACEF8C8C135228D40062BBF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		ACEF8C8E135228D40062BBF6 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		ACEF8C8E135228D40062BBF6 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		ACEF8C8F135228D40062BBF6 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		ACEF8C92135228D40062BBF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		ACEF8C99135228D40062BBF6 /* PhoneGuideTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneGuideTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACEF8CA1135228D40062BBF6 /* PhoneGuideTests-Info.plist */ = {isa = PBXFileReference; path = "PhoneGuideTests-Info.plist"; sourceTree = "<group>"; };
+		ACEF8CA1135228D40062BBF6 /* PhoneGuideTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhoneGuideTests-Info.plist"; sourceTree = "<group>"; };
 		ACEF8CA3135228D40062BBF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ACEF8CA5135228D40062BBF6 /* PhoneGuideTests-Prefix.pch */ = {isa = PBXFileReference; path = "PhoneGuideTests-Prefix.pch"; sourceTree = "<group>"; };
+		ACEF8CA5135228D40062BBF6 /* PhoneGuideTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneGuideTests-Prefix.pch"; sourceTree = "<group>"; };
 		ACEF8CA6135228D40062BBF6 /* PhoneGuideTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneGuideTests.h; sourceTree = "<group>"; };
 		ACEF8CA8135228D40062BBF6 /* PhoneGuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneGuideTests.m; sourceTree = "<group>"; };
+		ACEF8CB2135229E40062BBF6 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		ACEF8CB3135229E40062BBF6 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		ACEF8CB81352346E0062BBF6 /* NewPersonViewCOntroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPersonViewCOntroller.h; sourceTree = "<group>"; };
+		ACEF8CB91352346E0062BBF6 /* NewPersonViewCOntroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPersonViewCOntroller.m; sourceTree = "<group>"; };
+		ACEF8CBA1352346E0062BBF6 /* NewPersonViewCOntroller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPersonViewCOntroller.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +131,16 @@
 				ACEF8C8B135228D40062BBF6 /* MainWindow.xib */,
 				ACEF8C8E135228D40062BBF6 /* RootViewController.h */,
 				ACEF8C8F135228D40062BBF6 /* RootViewController.m */,
+				AC00CAF91353687F003772D8 /* EditPersonViewController.h */,
+				AC00CAFA1353687F003772D8 /* EditPersonViewController.m */,
+				AC00CAFB1353687F003772D8 /* EditPersonViewController.xib */,
+				ACEF8CB81352346E0062BBF6 /* NewPersonViewCOntroller.h */,
+				ACEF8CB91352346E0062BBF6 /* NewPersonViewCOntroller.m */,
+				ACEF8CBA1352346E0062BBF6 /* NewPersonViewCOntroller.xib */,
 				ACEF8C91135228D40062BBF6 /* RootViewController.xib */,
 				ACEF8C80135228D40062BBF6 /* Supporting Files */,
+				ACEF8CB2135229E40062BBF6 /* Person.h */,
+				ACEF8CB3135229E40062BBF6 /* Person.m */,
 			);
 			path = PhoneGuide;
 			sourceTree = "<group>";
@@ -225,6 +246,8 @@
 				ACEF8C84135228D40062BBF6 /* InfoPlist.strings in Resources */,
 				ACEF8C8D135228D40062BBF6 /* MainWindow.xib in Resources */,
 				ACEF8C93135228D40062BBF6 /* RootViewController.xib in Resources */,
+				ACEF8CBC1352346E0062BBF6 /* NewPersonViewCOntroller.xib in Resources */,
+				AC00CAFD1353687F003772D8 /* EditPersonViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +286,9 @@
 				ACEF8C87135228D40062BBF6 /* main.m in Sources */,
 				ACEF8C8A135228D40062BBF6 /* PhoneGuideAppDelegate.m in Sources */,
 				ACEF8C90135228D40062BBF6 /* RootViewController.m in Sources */,
+				ACEF8CB4135229E40062BBF6 /* Person.m in Sources */,
+				ACEF8CBB1352346E0062BBF6 /* NewPersonViewCOntroller.m in Sources */,
+				AC00CAFC1353687F003772D8 /* EditPersonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +469,7 @@
 				ACEF8CAE135228D40062BBF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACEF8CAF135228D40062BBF6 /* Build configuration list for PBXNativeTarget "PhoneGuideTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +478,7 @@
 				ACEF8CB1135228D40062BBF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

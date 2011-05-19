@@ -7,9 +7,11 @@
 //
 
 #import "PhoneGuideAppDelegate.h"
+#import "Person.h"
 
 @implementation PhoneGuideAppDelegate
 
+@synthesize persons;
 
 @synthesize window=_window;
 
@@ -17,6 +19,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Initialize var
+        
+    NSString *path;
+    path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"person.plist"];
+    if([[NSFileManager defaultManager] fileExistsAtPath:path]){
+        
+        self.persons = [[NSMutableArray alloc] init];
+        
+        NSArray *aux = [[NSArray alloc] initWithContentsOfFile:path];
+        for (int i=0; i<[aux count]; i++) {
+            NSDictionary *dic = (NSDictionary *) [aux objectAtIndex:i];
+            Person *p = [[Person alloc] init];
+            p.name = [dic objectForKey:@"name"];
+            p.nTelephone = [(NSNumber *) [dic objectForKey:@"nTelephone"] intValue];
+            [self.persons addObject:p];
+            [p release];
+        }
+        [aux release];
+    }else{
+        self.persons = [[NSMutableArray alloc] init];
+
+    }
+    
+    
     // Override point for customization after application launch.
     // Add the navigation controller's view to the window and display.
     self.window.rootViewController = self.navigationController;
@@ -56,17 +82,25 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    /*
-     Called when the application is about to terminate.
-     Save data if appropriate.
-     See also applicationDidEnterBackground:.
-     */
+    //Save data in .plist
+    NSMutableArray *aux = [[NSMutableArray alloc] init];
+    for (int i=0; i<[self.persons count]; i++) {
+        Person *p = [self.persons objectAtIndex:i];
+        NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:p.name, @"name", [NSNumber numberWithInt:p.nTelephone] , @"nTelephone", nil];
+        [aux addObject:dictionary];
+        [aux release];
+    }
+    NSLog(@"Escribimos el fichero en la ruta de documents del iphone");
+    NSString *path;
+    path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"person.plist"];
+    [aux writeToFile:path atomically:YES];
 }
 
 - (void)dealloc
 {
     [_window release];
     [_navigationController release];
+    [self.persons release];
     [super dealloc];
 }
 

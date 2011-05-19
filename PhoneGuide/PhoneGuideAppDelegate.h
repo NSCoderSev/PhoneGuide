@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface PhoneGuideAppDelegate : NSObject <UIApplicationDelegate> {
+    
+    NSMutableArray *persons;
 
 }
+
+
+
+@property (nonatomic, retain) NSMutableArray *persons;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 

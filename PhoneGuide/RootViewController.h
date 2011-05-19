@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Person;
 
 @interface RootViewController : UITableViewController {
-
+    
 }
 
+-(NSMutableArray *) persons;
+-(void) insertNewPerson:(Person *) person;
 
 @end
