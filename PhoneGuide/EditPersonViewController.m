@@ -25,8 +25,23 @@
 }
 
 -(BOOL) textField:(UITextField *) textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    NSLog(@"Comprobamos la longitud de la cadena");
-    return YES;
+    
+    NSLog(@"Comprobamos la longitud de la cadena %i", textField.text.length);
+    
+    UIAlertView *alerta;
+    
+    if(textField.text.length < 9 || [string stringByTrimmingCharactersInSet:[NSCharacterSet controlCharacterSet]].length == 0){
+        return YES;
+    }else{
+        alerta = [[UIAlertView alloc] initWithTitle:@"Error" message:@"El número de teléfono no puede sobrepasar los 9 dígitos!" 
+                                           delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        
+        [alerta show];
+        [alerta release];
+        
+        return NO;
+    }
+    
 }
 
 - (void)dealloc
@@ -52,6 +67,7 @@
     txtName.text = person.name;
     txtNTelephone.text = [NSString stringWithFormat:@"%i", person.nTelephone];
     
+    txtNTelephone.delegate = self;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }

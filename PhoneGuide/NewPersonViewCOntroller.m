@@ -18,10 +18,9 @@
     
     NSLog(@"Comprobamos la longitud de la cadena %i", textField.text.length);
    
-       
     UIAlertView *alerta;
-    
-    if(textField.text.length < 9){
+   
+    if(textField.text.length < 9 || [string stringByTrimmingCharactersInSet:[NSCharacterSet controlCharacterSet]].length == 0){
             return YES;
     }else{
         alerta = [[UIAlertView alloc] initWithTitle:@"Error" message:@"El número de teléfono no puede sobrepasar los 9 dígitos!" 
